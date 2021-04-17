@@ -1,0 +1,11 @@
+CHIP tests2 {
+    IN  
+        x[16],  // 16-bit inputs        
+        zx; // zero the x input?
+
+    OUT 
+        out[16]; // 16-bit output
+
+    PARTS:
+	Mux4Way16 (a[0..15]=x[0..15],b[0..15]=x[0..15],c[0..15]=x[0..15],d[0..15]=x[0..15], sel[0]=zx, sel[1]=zx);
+}
